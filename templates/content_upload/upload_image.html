@@ -5,11 +5,17 @@
 
 {% block content %}
   <div class="container">
-  	<h3>Image Upload</h3>
-    <form action="{% url 'image' %}" method="post" enctype="multipart/form-data">
+  	<h3>Automatically deployed!
+    </h3>
+    <form action="{% url 'image' %}" method="post" enctype="multipart/form-data" class="form-inline">
       {% csrf_token %}
-      {{ form.as_p }}
-      <button type="submit" class="btn btn-default">Submit</button>
+      <div class="form-group">
+        <label for="ImageUpload" class="sr-only">Image</label>
+        {{ form.image }}
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
     </form>
     {% if message %}
       <strong>{{message}}</strong>
