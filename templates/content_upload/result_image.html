@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+  	{% if image_src %}
+    	<img src="data:image/png;base64,{{ image_src }}"/>
+    {% else %}
+    {% endif %}
+  </div>
+{% endblock %}

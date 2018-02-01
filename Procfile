@@ -1,0 +1,1 @@
+web: gunicorn Portrait.wsgi --log-file -
